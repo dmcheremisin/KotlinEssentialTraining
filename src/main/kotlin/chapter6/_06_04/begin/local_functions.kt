@@ -2,6 +2,14 @@ package chapter6._06_04.begin
 
 fun main() {
     val words = listOf("racecar", "civic", "level", "butter")
+    for (word in words)
+        println("$word is palindrome? ${isPalindrome(word)}")
+    //racecar is palindrome? true
+    //civic is palindrome? true
+    //level is palindrome? true
+    //butter is palindrome? false
+
+    words.forEach { println("$it is palindrome? ${isPalindrome(it)}") }
 }
 
 fun isPalindrome(word: String): Boolean {
