@@ -1,7 +1,6 @@
 package chapter7._07_06.begin
 
-class Bosco() {
-    private var instances = 0
+class Bosco {
 
     init {
         incrementInstances()
@@ -13,6 +12,7 @@ class Bosco() {
         fun incrementInstances() {
             instances++
         }
+
         fun show() {
             println(instances)
         }
