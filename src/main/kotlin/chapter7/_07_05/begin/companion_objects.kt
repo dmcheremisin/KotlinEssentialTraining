@@ -8,6 +8,7 @@ class CantCreate constructor(val message: String) {
     companion object {
         const val LIGHT_SPEED = 299_792_458
         fun factory(msg: String): CantCreate {
+            println("Create")
             return CantCreate(msg)
         }
 
@@ -18,6 +19,8 @@ class CantCreate constructor(val message: String) {
 }
 
 fun main() {
+    val cantCreate = CantCreate("new")
+    println(cantCreate)
     val c1 = CantCreate.factory("Hello, there")
     c1.showMessage()
     CantCreate.sillyPrint(c1)

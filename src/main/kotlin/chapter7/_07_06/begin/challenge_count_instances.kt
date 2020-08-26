@@ -1,6 +1,22 @@
 package chapter7._07_06.begin
 
-class Bosco {
+class Bosco() {
+    private var instances = 0
+
+    init {
+        incrementInstances()
+    }
+
+    companion object {
+        private var instances = 0
+
+        fun incrementInstances() {
+            instances++
+        }
+        fun show() {
+            println(instances)
+        }
+    }
 }
 
 fun nop() {
@@ -12,5 +28,5 @@ fun main() {
     val b2 = Bosco()
     nop()
     val b3 = Bosco()
-//    Bosco.show()
+    Bosco.show()
 }
